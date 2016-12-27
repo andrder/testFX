@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class ObjKASDU {
     ArrayList<SignalTS> ListTS;
-    ArrayList<SignalTU> ListTU;
+    ArrayList<CommandTU> ListTU;
     String qwe;
 
 

@@ -2,8 +2,8 @@ package kasdu;
 
 
 public class SignalTS {
-    private final String name;
-    private final KasduAddr addr;
+    final String name;
+    final KasduAddr addr;
     private final boolean alarm;
     private boolean currentValue = false;
     private boolean valueIsDefined = false;
@@ -14,13 +14,6 @@ public class SignalTS {
         this.alarm = alarm;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public KasduAddr getAddr() {
-        return addr;
-    }
 
     public boolean getCurrentValue() {
         return currentValue;
@@ -36,5 +29,12 @@ public class SignalTS {
 
     public void setValueDefined(boolean valueIsDefined) {
         this.valueIsDefined = valueIsDefined;
+    }
+
+    @Override
+    public String toString() {
+        String alarmStr;
+        if (alarm) alarmStr=" AlarmSig"; else alarmStr="";
+        return "\n"+name+" "+addr+alarmStr;
     }
 }

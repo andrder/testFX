@@ -15,5 +15,10 @@ public class KasduAddr {
         this.numGr = numGr;
         this.numObj = numObj;
     }
+
+    @Override
+    public String toString() {
+        return nameKP + " " + numKP + " Gr:"+numGr + " O:" + numObj;
+    }
 }
 

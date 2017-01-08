@@ -5,18 +5,15 @@ package kasdu;
  */
 public class CommandTU {
     public final String name;
-    private final KasduAddr addr;
+    public final KasduAddr addr;
 
     public CommandTU(String name, KasduAddr addr) {
         this.name = name;
         this.addr = addr;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public KasduAddr getAddr() {
-        return addr;
+    @Override
+    public String toString() {
+        return "\n"+name+" "+addr;
     }
 }
